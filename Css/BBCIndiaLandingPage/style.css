@@ -20,10 +20,9 @@ header li:nth-child(1) {
   font-weight: 600;
 }
 nav {
-    margin-top: 35px;
+  margin-top: 35px;
   display: flex;
   justify-content: space-between;
-
   border-bottom: 1px solid gray;
   /* padding: px; */
   align-items: center;

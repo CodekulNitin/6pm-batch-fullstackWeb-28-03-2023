@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-repeat: no-repeat;
+            height: 100%;
+            opacity: 0.2;
+        }
+
+        .flex-wrapper {
+            display: flex;
+            max-width: 800px;
+            margin: auto;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            opacity: 1;
+        }
+
+        .flexbox {
+            height: 250px;
+            width: 250px;
+            background-color: blueviolet;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flexbox1 {
+            background-color: blue;
+            flex-grow: 1;
+        }
+
+        .flexbox2 {
+            background-color: rgb(0, 255, 0);
+            flex-shrink: 4;
+        }
+
+        .flexbox3 {
+            background-color: rgb(255, 72, 0);
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<!-- https://meetwoodrow.com/?ref=onepagelove -->
+<!-- Assignment -->
+<!-- https://fonts.google.com/ -->
+
+<body>
+    <div class="flex-wrapper">
+        <div class="flexbox flexbox1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus consequuntur natus quos quibusdam
+                accusantium, assumenda dolores tempora incidunt, quod magnam labore minus quaerat voluptates earum esse
+                repellat maiores autem in.</p>
+        </div>
+        <div class="flexbox flexbox2">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia deleniti eius cum laudantium corrupti
+                repellendus dolore possimus est. Eum accusamus quis veritatis minus beatae enim molestias facere
+                doloribus quam inventore.
+            </p>
+        </div>
+        <div class="flexbox flexbox3">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quae magnam! Cupiditate aliquam
+                similique delectus ad ullam consectetur ipsa, quasi numquam, totam veritatis earum quibusdam corporis
+                repellendus aperiam qui rem?</p>
+        </div>
+    </div>
+</body>
+
+</html>
