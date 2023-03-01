@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        }
+        .card1{
+            border: 1px solid red;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .card2{
+            border: 1px solid rgb(211, 22, 69);
+            height: 100px;
+        }
+        .card3{
+            border: 1px solid rgb(238, 255, 0);
+
+            grid-row-start: 1;
+            grid-row-end: 6;
+        }
+        .card4{
+            border: 1px solid rgb(98, 0, 255);
+            height: 100px;
+        }
+        .card5{
+            border: 1px solid rgb(0, 183, 255);
+            height: 100px;
+        }
+        .card6{
+            border: 1px solid rgb(255, 196, 0);
+            height: 100px;
+        }
+        .card7{
+            border: 1px solid rgb(255, 0, 179);
+
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+        .card8{
+            border: 1px solid rgb(81, 255, 0);
+            height: 100px;
+        }
+        .card9{
+            border: 1px solid rgb(140, 0, 255);
+            height: 100px;
+        }
+        .card10{
+            border: 1px solid rgb(31, 26, 34);
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card1"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+        <div class="card4"></div>
+        <div class="card5"></div>
+        <div class="card6"></div>
+        <div class="card7"></div>
+        <div class="card8"></div>
+        <div class="card9"></div>
+        <div class="card10"></div>
+
+    </div>   
+</body>
+</html>
