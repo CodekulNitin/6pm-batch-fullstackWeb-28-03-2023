@@ -1,0 +1,105 @@
+body {
+  background-color: rgb(231, 231, 231);
+  
+}
+nav {
+  position: fixed;
+  top: 0px;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  background-color: rgb(231, 231, 231);
+  overflow: hidden;
+}
+nav,
+div {
+  padding-bottom: 2px;
+  display: flex;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 50px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+nav,
+div,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+nav,
+div,
+li,
+a:nth-child(1) {
+  color: #265316;
+}
+#planta {
+  font-size: 30px;
+  font-weight: 600;
+  color: #265316;
+}
+nav div button {
+  border-radius: 20px;
+  width: 110px;
+  color: #265316;
+  cursor: pointer;
+}
+
+nav div button:hover {
+  background-color: black;
+  color: white;
+}
+.container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+.section1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-content: center;
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+}
+.section1 h1 {
+  font-size: 90px;
+  color: #1c3b11 !important;
+  display: flex;
+  justify-content: center;
+}
+.desc{
+/* text-align: center; */
+width: 500px;
+position: relative;
+left: 32px;
+bottom: 130px;
+  
+}
+.section2 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  overflow: hidden;
+}
+.section2 img {
+  height: 600px;
+}
+.plantaBox{
+    background-color: #1c3b11 !important;
+    width: 40px;
+    height: 60px;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+left: 120px;
+top: 150px;
+}
+.plantaBox label{
+    text-align: center !important;
+ position: relative;
+ font-size: 20px;
+ top: 20px;
+ left: 20px;
+}
