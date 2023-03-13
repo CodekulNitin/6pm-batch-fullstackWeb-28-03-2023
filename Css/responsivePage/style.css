@@ -1,0 +1,92 @@
+.container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.card {
+  height: 100px;
+  background-color: aquamarine;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0px 1px 0px 0px lightgray;
+  background: white;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  position: relative;
+  right: 30px;
+}
+#hamburgerMenu {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .menuList {
+    display: none;
+  }
+  #hamburgerMenu {
+    display: block;
+    position: relative;
+    right: 10px;
+  }
+  #hamburgerMenu button img {
+    height: 20px;
+  }
+  .container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .card {
+    height: 200px;
+    background-color: rgb(176, 127, 255);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #hamburgerMenu {
+    display: block;
+    position: relative;
+    right: 10px;
+  }
+  .menuList {
+    display: none;
+  }
+  #hamburgerMenu button img {
+    height: 20px;
+  }
+  .container {
+    padding-top: 10px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  #hamburgerMenu {
+    display: none;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    height: 200px;
+    background-color: rgb(153, 255, 127);
+  }
+}
