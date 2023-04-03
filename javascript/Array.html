@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- https://www.freecodecamp.org/news/javascript-loops-explained-for-loop-for/ -->
+    <script>
+        const nonEligible = []
+        const EligibleArr = []
+        const studentListArr = [
+            {
+                id: 1,
+                name: "codekul",
+                totalFees: 40000,
+                fees: 40000,
+                isApplicable: true
+            },
+            {
+                id: 2,
+                name: "AppyStack",
+                totalFees: 40000,
+                fees: 30000,
+                isApplicable: false
+            },
+            {
+                id: 2,
+                name: "nexttech",
+                totalFees: 40000,
+                fees: 35000,
+                isApplicable: false
+            }
+        ]
+        console.log("studentListArr", studentListArr);
+        for (let obj of studentListArr) {
+            console.log("Fees", obj.fees);
+            if (obj.isApplicable === true) {
+                let newObj = {}
+                newObj.id = obj.id;
+                newObj.name = obj.name;
+                newObj.fees = obj.fees;
+                newObj.totalFees = obj.totalFees
+                newObj.isApplicable = obj.isApplicable
+
+                console.log("welcome to exam center");
+                EligibleArr.push(newObj)
+            } else {
+                let newObj = {}
+                newObj.id = obj.id;
+                newObj.name = obj.name;
+                newObj.fees = obj.fees;
+                newObj.totalFees = obj.totalFees
+                newObj.isApplicable = obj.isApplicable
+                console.log("you are not eligible to exam center");
+                nonEligible.push(newObj)
+
+            }
+        }
+        console.log("welcome EligibleArr", EligibleArr);
+        console.log("welcome nonEligible", nonEligible);
+        // Assignment 
+        // 1) write a javascript code to find A grade student b grade student,c garde student and fail student
+     
+
+    </script>
+</body>
+
+</html>
