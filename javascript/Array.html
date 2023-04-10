@@ -34,7 +34,8 @@
                 totalFees: 40000,
                 fees: 35000,
                 isApplicable: false
-            }
+            },
+
         ]
         console.log("studentListArr", studentListArr);
         for (let obj of studentListArr) {
@@ -46,7 +47,6 @@
                 newObj.fees = obj.fees;
                 newObj.totalFees = obj.totalFees
                 newObj.isApplicable = obj.isApplicable
-
                 console.log("welcome to exam center");
                 EligibleArr.push(newObj)
             } else {
@@ -58,14 +58,56 @@
                 newObj.isApplicable = obj.isApplicable
                 console.log("you are not eligible to exam center");
                 nonEligible.push(newObj)
-
             }
         }
-        console.log("welcome EligibleArr", EligibleArr);
+        if (EligibleArr.length > 0) {
+
+            console.log("welcome EligibleArr", EligibleArr);
+        }
         console.log("welcome nonEligible", nonEligible);
         // Assignment 
         // 1) write a javascript code to find A grade student b grade student,c garde student and fail student
-     
+        // array length
+        // example 1) finding number of elements in an array
+
+        const companyList = ["Apple", "Google", "Facebook", "Amazon"]
+        console.log("companyList", companyList);
+        const list = ["Apple", 44]
+        console.log("companyList", list.length);
+
+        // for (let i = 0; i < companyList.length; i++) {
+        //     console.log("companyList", companyList[i]);
+        // }
+        const languages = ["js", "py", "java", "react", "c"]
+        languages.length = 3
+        console.log("languages", languages);
+
+
+        // js array reverse
+        // 1) 
+        let numbers = [1, 2, 3, 4, 5, 6, 7]
+        let reverseArray = numbers.reverse()
+        console.log(reverseArray);
+
+        // Array Sort()
+        // The sort() method sorts the items of an array in a specific order (ascending or descending)
+        const city = ["surat", "pune", "nashik", "mumbai"]
+        let sortedArray = city.sort()
+        console.log("sortedArray", sortedArray);
+
+        //Assignment (1) sorting numbers numerically
+        const priceList = [1000, 50, 2, 7, 14]
+        // sort() using function expression
+        // ascending order
+        priceList.sort(function (a, b) {
+            console.log("value of b", b);
+            // console.log("value of a",a);
+            return a - b;
+        })
+        console.log("ascending", priceList);
+
+        // if a-b < 0 ,a comes befor b for example , 2 comes before 7  as 2-7 < 0
+        // if a-b > 0, b comes befor a for example , 1000 comes after 50 as 1000-50 > 0 
 
     </script>
 </body>
