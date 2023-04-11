@@ -105,34 +105,113 @@
             return a - b;
         })
         console.log("ascending", priceList);
-
+        // https://www.freecodecamp.org/news/javascript-map-how-to-use-the-js-map-function-array-method/
         // if a-b < 0 ,a comes befor b for example , 2 comes before 7  as 2-7 < 0
         // if a-b > 0, b comes befor a for example , 1000 comes after 50 as 1000-50 > 0 
-// array fill
-// array join 
-// array toString
-// array pop
-// array shift
-// unshift
-// concat
-// splice
-// lastIndexOf
-// IndexOf
-// of
-// slice 
-// find
-// reduceRight
-// reduce
-// isArray
-// filter
-// map
-// some 
-//entries
-// values 
-// .from 
-// toLocalString
-// flat 
-// flatMap
+        // array fill
+        // array join 
+        // array toString
+        // array pop
+        // array shift
+        // unshift
+        // concat
+        // splice
+        // lastIndexOf
+        // IndexOf
+        // of
+        // slice 
+        // find
+        // reduceRight
+        // reduce
+        // isArray
+        // filter
+        // map
+        // some 
+        //entries
+        // values 
+        // .from 
+        // toLocalString
+        // flat 
+        // flatMap
+
+        const languagesList = ['js', "py", "c"]
+        languagesList.push("reactjs")
+        languagesList.unshift("java", 2)
+        languagesList.pop()
+        languagesList.shift()
+        console.log("languages", languagesList);
+
+        const ActorsName = [
+            {
+                id: 1,
+                name: "Shahrukh Khan",
+                payment: 30000,
+            },
+            {
+                id: 2,
+                name: "Ajay Devgan",
+                payment: 40000,
+            },
+            {
+                id: 3,
+                name: "Akshay kumar",
+                payment: 25000,
+            },
+            {
+                id: 4,
+                name: "sanjay Datt",
+                payment: 35000,
+            }
+        ]
+        // for (let i = 0; i < ActorsName.length; i++) {
+        //     ActorsName[i].payment = ActorsName[i].payment - 1000
+        //     console.log(i);
+        // }
+
+        // ActorsName.forEach((actor)=>{
+        // console.log("actorsListactorsList", actor);
+        // actor.payment = actor.payment-1000
+        // })
+
+        // for(let actor of ActorsName){
+        //     actor.payment = actor.payment-1000
+        // }
+
+
+
+        const students = [
+            {
+                name: "Student 1",
+                marks: 35
+            },
+            {
+                name: "Student 2",
+                marks: 44
+            },
+            {
+                name: "Student 3",
+                marks: 50
+            },
+            {
+                name: "Student 4",
+                marks: 87
+            },
+            {
+                name: "Student 4",
+                marks: 60
+            },
+        ]
+
+        console.log("Students", students);
+
+        const failed = students.filter((student, index) => {
+            if (student.marks < 45) {
+                return true
+            } else {
+                return false
+            }
+        })
+        console.log("Std List", failed);
 
     </script>
 </body>
