@@ -179,39 +179,50 @@
 
 
 
-        const students = [
-            {
-                name: "Student 1",
-                marks: 35
-            },
-            {
-                name: "Student 2",
-                marks: 44
-            },
-            {
-                name: "Student 3",
-                marks: 50
-            },
-            {
-                name: "Student 4",
-                marks: 87
-            },
-            {
-                name: "Student 4",
-                marks: 60
-            },
-        ]
+        // const students = [
+        //     {
+        //         name: "Student 1",
+        //         marks: 35
+        //     },
+        //     {
+        //         name: "Student 2",
+        //         marks: 44
+        //     },
+        //     {
+        //         name: "Student 3",
+        //         marks: 50
+        //     },
+        //     {
+        //         name: "Student 4",
+        //         marks: 87
+        //     },
+        //     {
+        //         name: "Student 4",
+        //         marks: 60
+        //     },
+        // ]
 
-        console.log("Students", students);
+        // console.log("Students", students);
 
-        const failed = students.filter((student, index) => {
-            if (student.marks < 45) {
-                return true
-            } else {
-                return false
-            }
-        })
-        console.log("Std List", failed);
+        // const failed = students.filter((student, index) => {
+        //     if (student.marks < 45) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // })
+        // console.log("Std List", failed);
+
+        // the reducer() method executes of reducer function on each element 
+        // of the array and returns  a single output value
+
+        const langArr = ["js", "is","function"]
+
+        function joinStrings(accumulator,currentValue){
+            return accumulator+currentValue
+        }
+        let joinedString = langArr.reduce(joinStrings)
+        console.log("joinString is",joinedString);
 
     </script>
 </body>
