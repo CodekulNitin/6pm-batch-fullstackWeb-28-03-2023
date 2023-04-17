@@ -216,13 +216,61 @@
         // the reducer() method executes of reducer function on each element 
         // of the array and returns  a single output value
 
-        const langArr = ["js", "is","function"]
+        // const langArr = [1, 2, 3, 4, 5, 6, 2, 6, 1]
+        // let uniqueArr = langArr.reduce(function (accumulator, currentValue) {
+        //     if (accumulator.indexOf(currentValue) === -1) {
+        //         accumulator.push(currentValue)
+        //     }
+        //     return accumulator
+        // }, [])
 
-        function joinStrings(accumulator,currentValue){
-            return accumulator+currentValue
+        // console.log("uniqueArr", uniqueArr);
+
+        // Assignment 
+
+        // 1) grouping Objects by a property 
+        // let people = [
+        //     { name: "john", age: 24 },
+        //     { name: "oliver", age: 27 },
+        //     { name: "michael", age: 23 },
+        //     { name: "oscar", age: 32 },
+        //     { name: "dwight", age: 67 },
+        //     { name: "kevin", age: 72 },
+        //     { name: "selena", age: 29 },
+        //     { name: "tylor swift", age: 42 },
+        // ]
+
+        // output {
+        // "19":[{}]
+        // "21":[{},{}]
+        // "23":[{},{},{}]
+        // "25":[{},{}]
+        // }
+
+        // Array map method
+        //  The map() method creates a new array with the results of calling a function for every array element 
+
+        let number = [2, 4, 6, 8, 10]
+        // function to return the  square
+        function square(number) {
+            return number * number
         }
-        let joinedString = langArr.reduce(joinStrings)
-        console.log("joinString is",joinedString);
+        // apply sequare() function to each item of the number
+
+        let sequare_numbers = number.map(square)
+
+        console.log("sequare_numbers", sequare_numbers);
+
+// returns  an new array with the elements as the returns value from the callback function for each element
+
+// map () does not change the original array
+// map () executes callback once for each array element in order
+// map () does not execute callback  for every elements without values
+
+// assignment  2) mapping array elements using custome function
+// https://www.freecodecamp.org/news/math-in-javascript/
+const price =[1800,2000,3000,5000,500,8000]
+// Map.sqrt
 
     </script>
 </body>
