@@ -163,6 +163,25 @@
                 payment: 35000,
             }
         ]
+
+        // forEach takes a callback function and run that callback function on each elements of array one by one
+        // es5
+        let sample = [1, 2, 3]
+        sample.forEach(function (ele, index) {
+            console.log("ele", ele +
+                index);
+        })
+        // es6
+        sample.forEach((ele, index) => console.log(`${ele} comes At ${index} `))
+
+        function getFree(isMembar) {
+            return (isMembar ? "2:00" : "1:00")
+        }
+        
+        console.log("hh", getFree(true));
+        console.log(getFree(false));
+        console.log(getFree(null));
+
         // for (let i = 0; i < ActorsName.length; i++) {
         //     ActorsName[i].payment = ActorsName[i].payment - 1000
         //     console.log(i);
@@ -261,17 +280,21 @@
 
         console.log("sequare_numbers", sequare_numbers);
 
-// returns  an new array with the elements as the returns value from the callback function for each element
+        // returns  an new array with the elements as the returns value from the callback function for each element
 
-// map () does not change the original array
-// map () executes callback once for each array element in order
-// map () does not execute callback  for every elements without values
+        // map () does not change the original array
+        // map () executes callback once for each array element in order
+        // map () does not execute callback  for every elements without values
 
-// assignment  2) mapping array elements using custome function
-// https://www.freecodecamp.org/news/math-in-javascript/
-const price =[1800,2000,3000,5000,500,8000]
-// Map.sqrt
-
+        // assignment  2) mapping array elements using custome function
+        // https://www.freecodecamp.org/news/math-in-javascript/
+        const price = ["1"]
+        // Map.sqrt
+        let newPrice = price.map(Math.sqrt)
+        console.log("newPrice", Number(price));
+        let items = ["javascript", 1, "a", 3]
+        let itemString = items.toString()
+        console.log(itemString);
     </script>
 </body>
 
