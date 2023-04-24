@@ -177,7 +177,7 @@
         function getFree(isMembar) {
             return (isMembar ? "2:00" : "1:00")
         }
-        
+
         console.log("hh", getFree(true));
         console.log(getFree(false));
         console.log(getFree(null));
@@ -288,13 +288,21 @@
 
         // assignment  2) mapping array elements using custome function
         // https://www.freecodecamp.org/news/math-in-javascript/
-        const price = ["1"]
-        // Map.sqrt
-        let newPrice = price.map(Math.sqrt)
-        console.log("newPrice", Number(price));
-        let items = ["javascript", 1, "a", 3]
-        let itemString = items.toString()
-        console.log(itemString);
+        // const price = ["1"]
+        // // Map.sqrt
+        // let newPrice = price.map(Math.sqrt)
+        // console.log("newPrice", Number(price));
+        // let items = ["javascript", 1, "a", 3]
+        // let itemString = items.toString()
+        // console.log(itemString);
+
+        // array flat method
+        //  3 nested array
+
+        let numbersList = [1, 2, [3, 4, [5, 6, [7, 8]]]]
+        // reducing nesting by flattining  the array of depth 2
+        let flatArray = numbersList.flat(3)
+        console.log(flatArray);
     </script>
 </body>
 
