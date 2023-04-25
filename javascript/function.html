@@ -46,7 +46,7 @@
         // let y = x(3)
         // console.log(y);
 
-        // variable scope 
+        // variable scope
         // 1) global scope
         // 2) local scope
 
@@ -60,7 +60,7 @@
         // myFunction()
         // console.log(a);
 
-        // local scope 
+        // local scope
 
         // let a ="codekul"
         //  function myFunction(){
@@ -70,26 +70,64 @@
         //  myFunction()
         //  console.log(a);
 
-        let a = "codekul" // global variable
-        function myFunction() {
-            // local variable 
-            let b = "appystack" // local variable
-            console.log("value of a", a + " " + b);
+        // let a = "codekul" // global variable
+        // function myFunction() {
+        //     // local variable
+        //     let b = "appystack" // local variable
+        //     console.log("value of a", a + " " + b);
 
 
-            if (b === "appystack") {
-                let c = "hello" // block variable
-                console.log("value of b", a + '' + b + '' + c);
-            }
-            // console.log("value of c", a + '' + b + '' + c);
+        //     if (b === "appystack") {
+        //         let c = "hello" // block variable
+        //         console.log("value of b", a + '' + b + '' + c);
+        //     }
+        //     // console.log("value of c", a + '' + b + '' + c);
 
-        }
-        myFunction()
+        // }
+        // myFunction()
 
         // https://www.freecodecamp.org/news/what-is-hoisting-in-javascript/
 
-        
+        // myFunction()
+        // var a = 5
+        // function myFunction() {
+        //     b = "codekul"
+        //     console.log(b);
+        //     var b
+        // }
 
+        // recursion
+        // recursion is a process of calling iteself. a fuction that calls iteself is called a recursive function,
+
+        // syntax 
+        // function myFunction(number) {
+        //     console.log(number);
+        //     const newNumber = number - 1
+        //     if (newNumber > 0) {
+        //         myFunction(newNumber)
+        //     }
+
+        // }
+        // myFunction(4)
+
+        function factorial(x) {
+            // if number is 0
+            if (x === 0) {
+                return 1
+            }
+            // if number is positive 
+            else {
+                return x * factorial(x - 1)
+            }
+        }
+        const num = 3
+        // calling factorial() if num is non-negitive
+        if (num > 0) {
+            let result = factorial(num)
+            console.log(` the factorial of ${num} is ${result}`);
+        }
+        // https://www.freecodecamp.org/news/javascript-events-explained-in-simple-english/
+        // https://www.freecodecamp.org/news/html-dom-methods/
     </script>
 </body>
 
