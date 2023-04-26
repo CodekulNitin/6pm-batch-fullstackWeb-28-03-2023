@@ -18,15 +18,26 @@
     <h1 id="heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsam, asperiores omnis animi neque
         eligendi facere ullam obcaecati non ipsum aliquam nobis accusamus dolore ab maiores. Natus neque minus delectus.
     </h1>
+    <h2 id="heading2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsam, asperiores omnis animi neque
+        eligendi facere ullam obcaecati non ipsum aliquam nobis accusamus dolore ab maiores. Natus neque minus delectus.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta commodi voluptatem modi perspiciatis
+        repudiandae dignissimos, libero rem, similique delectus molestias sapiente accusantium, explicabo voluptatum
+        odio culpa omnis. Eius, suscipit quam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquid inventore cupiditate, assumenda obcaecati
+        unde delectus. Dignissimos inventore blanditiis ipsa qui facilis, suscipit tempore ipsum distinctio vitae
+        debitis, perferendis adipisci?
+    </h2>
     <button id="btn" onclick="handleClick()">Click me</button>
     <script>
         function handleClick() {
             let x = document.getElementById("heading")
+            let y = document.getElementById("heading2")
             if (x.style.display === "none") {
                 x.style.display = "block"
+                y.style.display = "none"
             } else {
                 x.style.display = "none"
-
+                y.style.display = "block"
             }
         }
     </script>

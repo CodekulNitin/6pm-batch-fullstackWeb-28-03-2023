@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- https://bootsnipp.com/snippets/dlZAN -->
+<body>
+    <h1 class="flex justify-center mt-2">Basic Form</h1>
+    <form id="myform" class="mt-5 flex justify-center">
+        <div class="shadow border p-5 rounded grid gap-2">
+
+            <label for="">Name: <input id="name" name="name" class="border border-blue-600 rounded" type="text"></label>
+            <label for="">Address: <input id="addr" name="address" class="border border-blue-600 rounded" type="text">
+            </label>
+            <button type="submit" class="bg-green-600 text-white rounded">
+                Submit
+            </button>
+        </div>
+
+
+    </form>
+
+    <script>
+        function getData(form) {
+            let formData = new FormData(form)
+
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ":" + pair[1]);
+            }
+            console.log(Object.fromEntries(formData));
+        }
+        document.getElementById("myform").addEventListener
+            ("submit", function (e) {
+                e.preventDefault()
+                getData(e.target)
+            })
+    </script>
+</body>
+
+</html>
