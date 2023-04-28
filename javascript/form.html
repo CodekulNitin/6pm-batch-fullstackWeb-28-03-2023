@@ -1,42 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<!-- https://bootsnipp.com/snippets/dlZAN -->
-<body>
-    <h1 class="flex justify-center mt-2">Basic Form</h1>
-    <form id="myform" class="mt-5 flex justify-center">
-        <div class="shadow border p-5 rounded grid gap-2">
-            <label for="">Name: <input id="name" name="name" class="border border-blue-600 rounded" type="text"></label>
-            <label for="">Address: <input id="addr" name="address" class="border border-blue-600 rounded" type="text">
-            </label>
-            <button type="submit" class="bg-green-600 text-white rounded">
-                Submit
-            </button>
-        </div>
-    </form>
+    <style>
+        table{
+            margin-top: 50px;
+            text-align: center;
 
-    <script>
-        function getData(form) {
-            let formData = new FormData(form)
-
-            for (let pair of formData.entries()) {
-                console.log(pair[0] + ":" + pair[1]);
-            }
-            console.log(Object.fromEntries(formData));
         }
-        document.getElementById("myform").addEventListener
-            ("submit", function (e) {
-                e.preventDefault()
-                getData(e.target)
-            })
-    </script>
-</body>
+        #show th, #show td{
+            padding: 6px;
+        
+        }
+    
+    </style>
+  </head>
+  <body>
+    <center>
+      <table border="4">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <td><input type="text" name="fname" id="fname" /></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Last Name</th>
+            <td><input type="text" name="lname" id="lname" /></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><input type="email" name="email" id="email" /></td>
+          </tr>
+          <tr>
+            <th>PhoneNumber</th>
+            <td><input type="number" name="PhoneNumber" id="PhoneNumber" /></td>
+            <td><input type="file" name="file" id="file" /></td>
+          </tr>
+          <tr id="btna">
+            <td colspan="2">
+              <input type="button" name="button" id="btn" value="Add" onclick="AddRow()" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="4" id="show">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+          </tr>
+        </thead>
+      </table>
+    </center>
+    <script>
+      var list1 = [];
+      var list2 = [];
+      var list3 = [];
+      var list4 = [];
+      var list5 = [];
 
+      var n = 1;
+      var y = 0;
+
+      function AddRow() {
+        var AddRow = document.getElementById("show");
+        var NewRow = AddRow.insertRow(n);
+
+        list1[y] = document.getElementById("fname").value;
+        list2[y] = document.getElementById("lname").value;
+        list3[y] = document.getElementById("email").value;
+        list4[y] = document.getElementById("PhoneNumber").value;
+        list5[y] = document.getElementById("file").value;
+
+        var cel1 = NewRow.insertCell(0);
+        var cel2 = NewRow.insertCell(1);
+        var cel3 = NewRow.insertCell(2);
+        var cel4 = NewRow.insertCell(3);
+        var cel5 = NewRow.insertCell(4);
+
+        cel1.innerHTML = list1[y];
+        cel2.innerHTML = list2[y];
+        cel3.innerHTML = list3[y];
+        cel4.innerHTML = list4[y];
+        cel5.innerHTML = list5[y];
+        n++;
+        y++;
+      }
+    </script>
+  </body>
 </html>

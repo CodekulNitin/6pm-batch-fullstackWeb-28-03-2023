@@ -9,57 +9,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-screen w-full">
-        <div class="h-[500px] bg-white w-9/12 absolute top-12 right-2 ml-12 rounded-l-full ">
-            <div class="flex space-x-2 justify-end mr-5 p-1 ">
-                <div class="bg-purple-900 w-36 rounded-full justify-between text-white flex space-x-2 p-1 text-sm px-2">
-                    <h1 class="bg-white text-blue-800 rounded-full p-1">Employee</h1>
-                    <h1>Hire</h1>
-                </div>
-            </div>
-            <h1 class="flex justify-center">Apply As Employee</h1>
-            <form id="myform" class="mt-5 flex justify-center">
-                <div class="grid grid-cols-2 gap-4">
-                    <input id="name" name="name" class="border border-blue-600 rounded text-xs pl-2  h-7" type="text" placeholder="Name">
-                    <input id="email" name="email" class="border border-blue-600 rounded text-xs pl-2  h-7" type="email"
-                        placeholder="Email">
-
-                    <input id="lname" name="lname" class="border border-blue-600 rounded text-xs pl-2  h-7" type="text" placeholder="Last Name">
-                    <input id="Number" name="Number" class="border border-blue-600 rounded text-xs pl-2  h-7" type="number" placeholder="Mobile Number">
-
-                    <input id="Password" name="Password" class="border border-blue-600 rounded text-xs pl-2  h-7" type="password" placeholder="Password">
-                    <input id="confirmpassword" name="confirmpassword" class="border border-blue-600 rounded text-xs pl-2  h-7"
-                        type="password" placeholder="Confirm Password">
-
-                    <input id="addr" name="address" class="border border-blue-600 rounded col-span-2 text-xs pl-2  h-7" type="text" placeholder="Address">
-
-
-                    <div class="col-span-2 flex justify-center">
-                        <button type="submit" class="bg-green-600 text-white rounded p-1 w-36">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </div>
+<body class="flex justify-center mt-5">
+    <form id="myform">
+        <input id="firstName" type="text" name="firstName" value="" placeholder="First Name"
+            class="border border-blue-500 rounded w-36 pl-2 text-sm" />
+        <input id="lastName" type="text" name="lastName" value="" placeholder="Last Name"
+            class="border border-blue-500 rounded w-36 pl-2 text-sm" />
+        <!-- <input id="myfile" type="file" multiple name="myfile" value="" placeholder="Last Name"
+            class="border border-blue-500 rounded pl-2 text-sm" /> -->
+        <button onclick="submitForm()" class="bg-green-600 text-white rounded text-sm p-1">
+            Submit
+        </button>
+    </form>
+    <div id="demo"></div>
     <script>
-        function getData(form) {
-            let formData = new FormData(form)
 
-            for (let pair of formData.entries()) {
-                console.log(pair[0] + ":" + pair[1]);
+        function submitForm() {
+            let element = document.getElementById("myform")
+            let obj = {}
+            for (let i = 0; i < element.length; i++) {
+                let item = element.item(i)
+                obj[item.name] = item.value
             }
-            console.log(Object.fromEntries(formData));
-            document.write(JSON.stringify(Object.fromEntries(formData)))
+            document.getElementById("demo").innerHTML= JSON.stringify(obj)
         }
-        document.getElementById("myform").addEventListener
-            ("submit", function (e) {
-                e.preventDefault()
-                getData(e.target)
-            })
     </script>
 
 </body>
